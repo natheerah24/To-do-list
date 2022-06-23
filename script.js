@@ -21,6 +21,7 @@ function loadTasks() {
     }" onfocus="getCurrentTask(this)" onblur="editTask(this)">
           <i class="fa fa-trash" onclick="removeTask(this)"></i>`;
     list.insertBefore(li, list.children[0]);
+    console.log(tasks);
   });
 }
 
@@ -105,6 +106,26 @@ function editTask(event) {
       task.task = event.value;
     }
   });
-  
+
   localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  while (switching) {
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    for (i = 0; i < b.length - 1; i++) {
+      shouldSwitch = false;
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
 }

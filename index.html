@@ -17,11 +17,18 @@
     <div class="container">
       <div class="app">
         <h1>TO DO LIST</h1>
-        <form>
-          <input type="text" placeholder="Add new task..." />
+
+        <form onsubmit="addRecord()">
+          <input type="text" placeholder="Add new task..." id="name" />
           <button type="submit">&plus;</button>
         </form>
-        <ul></ul>
+
+        <ul id="id01"></ul>
+        <div id="alpha">
+          <button class="alph-btm" onclick="sortList()">
+            Sort alphabetically
+          </button>
+        </div>
       </div>
     </div>
     <script src="/script.js"></script>

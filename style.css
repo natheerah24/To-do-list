@@ -13,7 +13,10 @@
 }
 
 .app {
-  width: 60%;
+  width: 40%;
+  background-color: #55845c;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -21,7 +24,11 @@
     width: 90%;
   }
 }
-
+#alpha {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .app h1 {
   color: white;
   font-size: 40px;
@@ -37,7 +44,14 @@
   width: 100%;
   background-color: #262e4c;
 }
-
+.alph-btm {
+  border: none;
+  color: white;
+  background-color: #777d50;
+  height: 42px;
+  width: 40%;
+  /* margin-left: 140px; */
+}
 .app form input {
   border: none;
   background-color: white;
@@ -71,7 +85,10 @@
   border-bottom-right-radius: 0.5rem 0.5rem 0 0 !important;
   border-bottom-left-radius: 0.5rem 0.5rem 0 0 !important;
 }
-
+/* .app {
+  width: 60%;
+  background-color: #55845c;
+} */
 .check {
   width: 0.8em;
   height: 0.8em;
