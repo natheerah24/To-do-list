@@ -45,6 +45,7 @@
   color: #55845c;
   padding: 10px;
   width: 90%;
+  outline: none;
 }
 
 .app form button {
